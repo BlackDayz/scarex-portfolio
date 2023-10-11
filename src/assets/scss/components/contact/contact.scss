@@ -1,0 +1,13 @@
+.section-contact {
+    background: $black;
+    text-align: center;
+    padding: $spacer-3 0;
+
+    h2, a {
+        color: $white;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

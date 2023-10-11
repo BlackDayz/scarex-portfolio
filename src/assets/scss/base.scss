@@ -1,8 +1,10 @@
 @import 'variables';
 @import 'style';
 @import '_typography.scss';
+@import '_custom.scss';
 
 
 @import 'components/header/header.scss';
 @import 'components/section-top/section-top.scss';
 @import 'components/clients/clients.scss';
+@import 'components/contact/contact.scss';
