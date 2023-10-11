@@ -1,0 +1,65 @@
+.header-main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $black;
+    padding: $spacer-3 0;
+
+    &-logo-text {
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+
+        .fade-out-text {
+            animation: fade-out-text 5s infinite ease-in-out;
+        }
+
+        .fade-in-text {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 2rem);
+            opacity: 0;
+            animation: fade-in-text 5s infinite ease-in-out;
+        }
+    }
+}
+
+@keyframes fade-in-text {
+    30% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 0.4rem);
+    }
+}
+
+@keyframes fade-out-text {
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

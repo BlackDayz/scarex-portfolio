@@ -10,10 +10,11 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint",
-        "format": "vue-cli-service lint --fix"
+        "lint": "vue-cli-service lint && stylelint **/*.scss"
     },
     "dependencies": {
+        "sass": "^1.69.2",
+        "stylelint-scss": "^5.2.1",
         "vue": "^3.2.13",
         "vue-router": "^4.0.3",
         "vuex": "^4.0.0"
@@ -28,7 +29,11 @@
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-vue": "^8.0.3",
         "lint-staged": "^11.1.2",
-        "prettier": "^2.4.1"
+        "node-sass": "^9.0.0",
+        "prettier": "^2.4.1",
+        "sass-loader": "^13.3.2",
+        "stylelint": "^15.10.3",
+        "stylelint-config-standard": "^34.0.0"
     },
     "gitHooks": {
         "pre-commit": "lint-staged"
