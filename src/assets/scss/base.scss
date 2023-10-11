@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'style';
-
-@import 'header/header.scss';
 @import '_typography.scss';
+
+
+@import 'components/header/header.scss';
+@import 'components/section-top/section-top.scss';

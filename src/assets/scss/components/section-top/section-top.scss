@@ -1,0 +1,49 @@
+.section-top {
+    height: 100vh;
+    padding: $spacer-6 0 0 0;
+    background-image: url('@/assets/gif/section-top.gif');
+    background-size: cover;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    &--background-filter {
+        padding: $spacer-6 0 0 0;
+        background-color: rgba($black, 0.5);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    &--text {
+        z-index: 1;
+        color: $white;
+        user-select: none;
+
+        &:hover {
+            cursor: url('@/assets/img/icon/icons8-cut-24.png'), auto;
+        }
+        
+        .text-highlight-yellow {
+            padding: $spacer-1;
+            background-color: rgb(255 255 0 / 35.4%);
+        }
+
+        h1 {
+            font-size: 8rem;
+            margin: 0;
+            line-height: 1;
+
+            p {
+                margin: 0;
+                font-size: calc(8rem * 2)
+            }
+        }
+
+        h3 {
+            padding: 0 $spacer-2;
+        }
+    }
+}
