@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
-    path: "/",
-    name: "Homepage",
+    path: '/',
+    name: 'Homepage',
     component: function () {
-      return import(/* webpackChunkName: "homepage" */ "../views/Homepage.vue");
+      return import(/* webpackChunkName: "homepage" */ '../views/Homepage.vue');
     },
   },
 ];
