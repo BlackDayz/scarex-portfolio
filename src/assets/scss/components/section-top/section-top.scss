@@ -15,6 +15,11 @@
         position: absolute;
         top: 0;
         left: 0;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            background-color: rgba($black, 0);
+        }
     }
     
     &--text {
@@ -28,7 +33,7 @@
         
         .text-highlight-yellow {
             padding: $spacer-1;
-            background-color: rgb(255 255 0 / 35.4%);
+            background-color: rgb(255 255 0 / 0.321);
         }
 
         h1 {

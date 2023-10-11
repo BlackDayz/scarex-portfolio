@@ -1,9 +1,11 @@
 <template>
   <HeaderComponent />
   <SectionTopComponent />
+  <ClientsComponent />
 </template>
 
 <script>
+import ClientsComponent from '@/components/homepage/clients.component.vue';
 import HeaderComponent from '@/components/homepage/header.component.vue';
 import SectionTopComponent from '@/components/homepage/section-top.component.vue';
 
@@ -12,7 +14,8 @@ export default {
   name: 'Homepage',
   components: {
     HeaderComponent,
-    SectionTopComponent
+    SectionTopComponent,
+    ClientsComponent,
   }
 };
 </script>

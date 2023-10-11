@@ -1,0 +1,38 @@
+.section-clients {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacer-5;
+    padding: $spacer-7 $spacer-5;
+
+    &--client {
+        img {
+            width: calc(100% - 3px);
+
+            ::before {
+                content: '';
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (width <= 1024px) {
+    .section-clients {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (width <= 768px) {
+    .section-clients {
+        grid-template-columns: 1fr;
+        padding: $spacer-3;
+    }
+}
