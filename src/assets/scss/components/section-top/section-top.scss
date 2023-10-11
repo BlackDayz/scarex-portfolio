@@ -26,10 +26,7 @@
         z-index: 1;
         color: $white;
         user-select: none;
-
-        &:hover {
-            cursor: url('@/assets/img/icon/icons8-cut-24.png'), auto;
-        }
+        pointer-events: none;
 
         h1 {
             font-size: 8rem;
