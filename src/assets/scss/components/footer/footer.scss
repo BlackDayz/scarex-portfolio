@@ -1,0 +1,29 @@
+.section-footer {
+    background: $black;
+    text-align: center;
+    padding: $spacer-2 0 $spacer-4 0;
+
+    hr {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -20px);
+        width: 10%;
+    }
+
+    a, p {
+        color: $white;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        margin: 0 $spacer-1;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
