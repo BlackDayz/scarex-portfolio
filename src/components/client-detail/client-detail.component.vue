@@ -14,12 +14,11 @@
                 <VueYtframe
                     v-for="ytId in client.details.ytIds"
                     :key="ytId"
-                    ref="yt"
                     :video-id="ytId"
                     height="300"
+                    ref="yt"
                     width="60%"
                     :player-vars="{ autoplay: 0, listType: 'user_uploads' }"
-                    @state-change="onStateChange"
                 />
         </div>
     </section> 
@@ -30,32 +29,17 @@ import {ref} from 'vue';
 // eslint-disable-next-line
 import VueYtframe from 'vue3-ytframe';
 
-const yt = ref(null);
-
 export default {
     name: 'ClientDetailComponent',
     data() {
         return {
-             
+            yt: ref(null)
         };
     },
     props: {
         client: {
             type: Object,
             required: true
-        }
-    },
-
-    methods: {
-        onStateChange(event) {
-            if (event.getPlayerState() === 1) {
-    // control the frames using the template reference
-    yt.value.forEach((video) => {
-      if (video.getVideoUrl() !== event.getVideoUrl()) {
-        video.pauseVideo();
-      }
-    });
-  }
         }
     },
 };
