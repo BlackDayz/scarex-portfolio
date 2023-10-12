@@ -1,6 +1,6 @@
 <template>
     <section class="section-contact">
-        <h2><span class="text-highlight-yellow">Überzeugt?</span></h2>
+        <h2><span class="text-highlight-yellow">{{ snippet.contact.convinced }}</span></h2>
         <a :href="`mailto:${email}`">{{ email }}</a>
     </section>
 </template>
@@ -11,7 +11,12 @@ export default {
     name: 'ContactComponent',
     data() {
         return {
-            email: 'business.scarex@gmail.com'
+            email: 'business.scarex@gmail.com',
+            snippet: {
+                contact: {
+                    convinced: 'Überzeugt?'
+                }
+            }
         };
     },
 };

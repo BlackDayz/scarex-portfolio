@@ -1,6 +1,5 @@
 .section-top {
     height: 100vh;
-    padding: $spacer-6 0 0 0;
     background-image: url('@/assets/gif/section-top.gif');
     background-size: cover;
     display: grid;
@@ -8,7 +7,7 @@
     align-items: center;
 
     &--background-filter {
-        padding: $spacer-6 0 0 0;
+        padding: calc($spacer-6 - .3rem) 0 0 0;
         background-color: rgba($black, 0.5);
         height: 100%;
         width: 100%;

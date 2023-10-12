@@ -1,0 +1,64 @@
+{
+    "clients": [
+        {
+            "id": "0",
+            "logoImg": "fibi.png",
+            "name": "Fibi",
+            "type": "Videoschnitt",
+            "time": "2022 - 2023",
+            "link": "/fibi",
+            "details": {
+                "description": "Ich konnte Fibi bereits 2022 und auch 2023 auf YouTube als Videoeditor mit <span class=\"text-highlight-yellow\">unterhaltsamen und qualitativen</span> Inhalten gut unterstützen. Hier sind einige der neuesten Videos.",
+                "images": [],
+                "videos": [],
+                "ytIds": [
+                    "xg-Zey0tp30",
+                    "8MGZKuNMe1M",
+                    "ezInUbWWdQU",
+                    "F1PF_Kjrb00",
+                    "QdaGsDw-3Go",
+                    "QQE9yfUog4g",
+                    "PAGia5RddTM"
+                ]
+            }
+        },
+        {
+            "id": "1",
+            "logoImg": "waveesports.png",
+            "name": "Wave Esports",
+            "type": "Video Editor",
+            "time": "2023 - 2023",
+            "link": "/waveesports"
+        },
+        {
+            "id": "2",
+            "logoImg": "aftereffects.jpg",
+            "name": "After Effects",
+            "type": "2023",
+            "time": "2023 - 2023",
+            "link": "/aftereffects"
+        },
+        {
+            "id": "3",
+            "logoImg": "tantechanti.png",
+            "name": "Tante Chanti",
+            "type": "Videoschnitt",
+            "time": "2023 - 2023",
+            "link": "/tantechanti"
+        },
+        {
+            "id": "4",
+            "logoImg": "rezonay.png",
+            "name": "Rezon ay",
+            "type": "YouTube",
+            "time": "2022 - 2023",
+            "link": "/rezonay",
+            "details": {
+                "description": "Ich arbeite mit Rezon ay als <span class=\"text-highlight-yellow\">Videoeditor</span> und <span class=\"text-highlight-yellow\">Channel Manager</span> zusammen und konnte ihn sowohl 2022 als auch 2023 bei der Erstellung von hochwertigen YouTube-Inhalten unterstützen.",
+                "images": [],
+                "videos": [],
+                "ytLinks": []
+            }
+        }
+    ]
+}

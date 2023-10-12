@@ -2,7 +2,7 @@
     <section class="section-clients">
             <div class="section-clients--client" v-for="client in clients" :key="client" @click="redirectToClient">
                 <div hidden :data-link="`${baseClientUrl}${client.link}`"></div>
-                <img :src="client.logo" :alt="client.name">
+                <img :src="fetchImgPath(client.logoImg)" :alt="client.name">
                 <div class="section-clients--client--text">
                     <p>{{ client.name }} | {{ client.type }}</p>
                     <span>{{ client.time }}</span>
@@ -12,48 +12,14 @@
 </template>
 
 <script>
+import clients from '../../assets/json/clients.json';
+
 export default {
     name: 'ClientsComponent',
     data() {
         return {
             baseClientUrl: '/clients',
-            clients: [
-                {
-                    'logo': new URL('@/assets/img/clients/fibi.png', import.meta.url).href,
-                    'name': 'Fibi',
-                    'type': 'Videoschnitt',
-                    'time': '2023 - 2023',
-                    'link': '/fibi'
-                },
-                {
-                    'logo': new URL('@/assets/img/clients/waveesports.png', import.meta.url).href,
-                    'name': 'Wave Esports',
-                    'type': 'Video Editor',
-                    'time': '2023 - 2023',
-                    'link': '/waveesports'
-                },
-                {
-                    'logo': new URL('@/assets/img/clients/aftereffects.jpg', import.meta.url).href,
-                    'name': 'After Effects',
-                    'type': '2023',
-                    'time': '2023 - 2023',
-                    'link': '/aftereffects'
-                },
-                {
-                    'logo': new URL('@/assets/img/clients/tantechanti.png', import.meta.url).href,
-                    'name': 'Tante Chanti',
-                    'type': 'Videoschnitt',
-                    'time': '2023 - 2023',
-                    'link': '/tantechanti'
-                },
-                {
-                    'logo': new URL('@/assets/img/clients/rezonay.png', import.meta.url).href,
-                    'name': 'Rezon ay',
-                    'type': 'YouTube',
-                    'time': '2023 - 2023',
-                    'link': '/rezonay'
-                }
-            ]
+            clients: clients.clients
         };
     },
     methods: {
@@ -69,7 +35,12 @@ export default {
             if(this.isValidUrl(url)) {
                 this.$router.push(url);
             }
+        },
+
+        fetchImgPath(logoImg) {
+            return require(`@/assets/img/clients/${logoImg}`);
         }
-    }
+    },
+
 };
 </script>
