@@ -5,6 +5,16 @@
     gap: $spacer-5;
     padding: $spacer-7 $spacer-5;
 
+    a {
+        color: $black;
+        text-decoration: none;
+
+        &:hover {
+            color: $black;
+            text-decoration: none;
+        }
+    }
+
     &--client {
         img {
             width: calc(100% - 3px);

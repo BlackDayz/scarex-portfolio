@@ -1,12 +1,14 @@
 <template>
     <section class="section-clients">
-            <div class="section-clients--client" v-for="client in clients" :key="client" @click="redirectToClient">
-                <div hidden :data-link="`${baseClientUrl}${client.link}`"></div>
-                <img :src="fetchImgPath(client.logoImg)" :alt="client.name">
-                <div class="section-clients--client--text">
-                    <p>{{ client.name }} | {{ client.type }}</p>
-                    <span>{{ client.time }}</span>
-                </div>
+            <div class="section-clients--client" v-for="client in clients" :key="client" >
+                <router-link :to="`${baseClientUrl}${client.link}`">
+                    <div hidden :data-link="`${baseClientUrl}${client.link}`"></div>
+                    <img :src="fetchImgPath(client.logoImg)" :alt="client.name">
+                    <div class="section-clients--client--text">
+                        <p>{{ client.name }} | {{ client.type }}</p>
+                        <span>{{ client.time }}</span>
+                    </div>
+                </router-link>
             </div>
     </section>
 </template>
@@ -23,20 +25,6 @@ export default {
         };
     },
     methods: {
-        isValidUrl(url) {
-            const clientsUrl = this.clients.find(client => `${this.baseClientUrl}${client.link}` === url);
-            const validUrl = `${this.baseClientUrl}${clientsUrl.link}`;
-
-            return url === validUrl;
-        },
-
-        redirectToClient() {
-            const url = document.querySelector('[data-link]').dataset.link;
-            if(this.isValidUrl(url)) {
-                this.$router.push(url);
-            }
-        },
-
         fetchImgPath(logoImg) {
             return require(`@/assets/img/clients/${logoImg}`);
         }
