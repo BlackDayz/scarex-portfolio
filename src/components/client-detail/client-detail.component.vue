@@ -5,10 +5,32 @@
             <p v-html="client.details.description"></p>
         </div>
         <div class="section-client-detail--images" v-if="client.details.images.length > 0">
+            <div
+                v-for="images in client.details.images"
+                :key="images"
+            >
+                <img
+                    v-for="image in images.srcs"
+                    :key="image"
+                    :src="require(`@/assets/img/clients/details/${image}`)"
+                />
 
+                <p>{{ images.caption }}</p>
+
+            </div>
         </div>
         <div class="section-client-detail--videos" v-if="client.details.videos.length > 0">
-            
+            <video
+                v-for="video in client.details.videos"
+                :key="video"
+                controls
+                :src="fetchVideoPath(video)"
+                :class="{'big': video === client.details.videos[0]}"
+                muted
+                autoplay
+            >
+
+            </video>
         </div>
         <div class="section-client-detail--yt" v-if="client.details.ytIds.length > 0">
                 <VueYtframe
@@ -41,6 +63,11 @@ export default {
             type: Object,
             required: true
         }
+    },
+    methods: {
+        fetchVideoPath(video) {
+            return require(`@/assets/mp4/${video}`);
+        },
     },
 };
 </script>
