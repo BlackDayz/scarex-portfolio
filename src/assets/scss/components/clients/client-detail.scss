@@ -3,6 +3,10 @@
     margin: 0 auto;
     width: 80%;
 
+    @media only screen and (width <= 768px) {
+        width: 90%;
+    }
+
     &--info {
         h2 {
             text-align: center;
@@ -15,6 +19,10 @@
             display: block;
             margin: 0 auto;
             width: 60%;
+
+            @media only screen and (width <= 1024px) {
+                width: 100%;
+            }
         }
     }
 
@@ -31,6 +39,10 @@
         iframe {
             width: 100%;
         }
+
+        @media only screen and (width <= 1024px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     &--videos {
@@ -40,6 +52,14 @@
 
         video {
             width: 100%;
+        }
+
+        @media only screen and (width <= 1024px) {
+            .big {
+                grid-column: 1 / 1;
+            }
+
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
