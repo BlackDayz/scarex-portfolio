@@ -16,4 +16,5 @@ module.exports = {
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
   },
+  ignorePatterns: ['dist/**/*', 'node_modules/**/*', 'public/**/*']
 };
