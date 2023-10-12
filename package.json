@@ -10,7 +10,7 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint && stylelint **/*.scss"
+        "lint": "vue-cli-service lint && stylelint **/*.{css,scss,vue}"
     },
     "dependencies": {
         "sass": "^1.69.2",
@@ -31,10 +31,13 @@
         "eslint-plugin-vue": "^8.0.3",
         "lint-staged": "^11.1.2",
         "node-sass": "^9.0.0",
+        "postcss-html": "^1.5.0",
         "prettier": "^2.4.1",
         "sass-loader": "^13.3.2",
         "stylelint": "^15.10.3",
-        "stylelint-config-standard": "^34.0.0"
+        "stylelint-config-standard": "^34.0.0",
+        "stylelint-config-standard-scss": "^11.0.0",
+        "stylelint-config-standard-vue": "^1.0.0"
     },
     "gitHooks": {
         "pre-commit": "lint-staged"

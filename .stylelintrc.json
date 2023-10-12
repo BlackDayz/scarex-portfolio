@@ -1,11 +1,24 @@
 {
-    "plugins": ["stylelint-scss"],
-    "extends": "stylelint-config-standard",
+    "extends": ["stylelint-config-standard"],
+    "overrides": [
+      {
+        "files": ["*.scss", "**/*.scss"],
+        "extends": ["stylelint-config-standard-scss"]
+      },
+      {
+        "files": ["*.vue", "**/*.vue"],
+        "extends": [
+          "stylelint-config-standard-scss",
+          "stylelint-config-standard-vue/scss"
+        ]
+      }
+    ],
     "rules": {
       "at-rule-no-unknown": null,
       "scss/at-rule-no-unknown": true,
       "import-notation": null,
       "at-rule-empty-line-before": null,
-      "alpha-value-notation": null
+      "alpha-value-notation": null,
+      "scss/at-import-partial-extension": null
     }
   }
