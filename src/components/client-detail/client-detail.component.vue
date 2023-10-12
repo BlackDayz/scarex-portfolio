@@ -2,7 +2,9 @@
     <section class="section-client-detail">
         <div class="section-client-detail--info">
             <h2>{{ client.name }} | {{ client.type }}</h2>
-            <p v-html="client.details.description"></p>
+            <div class="section-client-detail--info--text">
+                <p v-html="client.details.description"></p>
+            </div>
         </div>
         <div class="section-client-detail--images" v-if="client.details.images.length > 0">
             <div
