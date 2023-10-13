@@ -10,8 +10,7 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint && stylelint **/*.{css,scss,vue}",
-        "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
+        "lint": "vue-cli-service lint && stylelint **/*.{css,scss,vue}"
     },
     "dependencies": {
         "sass": "^1.69.3",

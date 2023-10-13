@@ -14,6 +14,20 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "client" */ '../views/Client-Details/Client-Details.view.vue');
     }
+  },
+  {
+    path: '/legal/impressum',
+    name: 'Impressum',
+    component: function () {
+      return import(/* webpackChunkName: "Impressum" */ '../views/legal/Imprint.view.vue');
+    }
+  },
+  {
+    path: '/legal/datenschutz',
+    name: 'Datenschutz',
+    component: function () {
+      return import(/* webpackChunkName: "Datenschutz" */ '../views/legal/Privacy.view.vue');
+    }
   }
 ];
 
