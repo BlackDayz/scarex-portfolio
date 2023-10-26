@@ -26,6 +26,12 @@
     outline: none;
   }
 
+  .recaptcha-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 ;
+  }
+
   input[type="submit"] {
     background-color: #4CAF50;
     color: white;

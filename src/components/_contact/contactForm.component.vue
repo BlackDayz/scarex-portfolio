@@ -2,13 +2,16 @@
   <section class="section-contact-form">
     <p v-html="response"></p>
     <form @submit="sendEmail">
-      <div class="g-recaptcha" :data-sitekey="reCaptchaSiteKey"></div>
       <label><span class="text-highlight-yellow">Name</span></label>
       <input type="text" v-model="inputs.name" name="name" placeholder="Your Name" required>
       <label><span class="text-highlight-yellow">Email</span></label>
       <input type="email" v-model="inputs.email" name="email" placeholder="Your Email" required>
       <label><span class="text-highlight-yellow">Message</span></label>
       <textarea name="message" v-model="inputs.message" cols="30" rows="5" placeholder="Message" required></textarea>
+
+      <div class="recaptcha-wrapper">
+        <div class="g-recaptcha" :data-sitekey="reCaptchaSiteKey"></div>
+      </div>
 
       <input type="submit" value="Send">
     </form>
