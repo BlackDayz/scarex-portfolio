@@ -2,6 +2,7 @@
   <section class="section-contact-form">
     <p v-html="response"></p>
     <form @submit="sendEmail">
+      <div class="g-recaptcha" :data-sitekey="reCaptchaSiteKey"></div>
       <label><span class="text-highlight-yellow">Name</span></label>
       <input type="text" v-model="inputs.name" name="name" placeholder="Your Name" required>
       <label><span class="text-highlight-yellow">Email</span></label>
@@ -21,6 +22,7 @@ export default {
   name: 'ContactFormComponent',
   data() {
     return {
+      reCaptchaSiteKey: '6LdVZM8oAAAAANLx_KkTKkR_3IUqwzyrStKjPwAy',
       sent: false,
       response: '',
       snippets: {
