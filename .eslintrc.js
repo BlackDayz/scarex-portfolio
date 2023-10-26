@@ -15,6 +15,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
+    'media-feature-range-notation': 0,
   },
   ignorePatterns: ['dist/**/*', 'node_modules/**/*', 'public/**/*']
 };

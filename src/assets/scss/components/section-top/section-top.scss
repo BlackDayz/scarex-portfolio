@@ -43,3 +43,17 @@
         }
     }
 }
+
+@media only screen and (width <= 768px) {
+    .section-top {
+        &--text {
+            h1 {
+                font-size: 15vw;
+
+                p {
+                    font-size: 30vw;
+                }
+            }
+        }
+    }
+}
