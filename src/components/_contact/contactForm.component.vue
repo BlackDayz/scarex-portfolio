@@ -23,6 +23,11 @@ export default {
     return {
       sent: false,
       response: '',
+      snippets: {
+        sending: 'Deine Nachricht wird vorbereitet und gesendet...',
+        success: '<span class="text-highlight-yellow">Deine Nachricht wurde erfolgreich gesendet!</span>',
+        error: '<span style="color: red;">Beim Senden ist ein Fehler aufgetreten. Bitte lade die Seite neu und versuche es erneut. Fehler: '
+      },
       emailConfig: {
         targetEmail: 'business.scarex@gmail.com',
         serviceId: 'service_9zlfc6r',
@@ -44,14 +49,14 @@ export default {
       if(me.sent) return;
       me.sent = true;
 
-      me.response = 'Sending...';
+      me.response = me.snippets.sending;
       emailjs.sendForm(me.emailConfig.serviceId, me.emailConfig.templateId, e.target, me.emailConfig.userId)
         .then(function () {
-          me.response = '<span class="text-highlight-yellow">Your message has been sent!</span>';
+          me.response = me.snippets.success;
           e.target.style.display = 'none';
         }).catch(function (error) {
-          me.response = '<span class="red">Your message has not been sent! Reload the page and try again. ' + error.message + '</span>';
-          console.log('FAILED...', error);
+          me.response = `${me.snippets.error} ${error} </span>`;
+          console.error('FAILED...', error);
         });
     },
   },
