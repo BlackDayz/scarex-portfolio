@@ -31,6 +31,7 @@ export default {
       snippets: {
         sending: 'Deine Nachricht wird vorbereitet und gesendet...',
         success: '<span class="text-highlight-yellow">Deine Nachricht wurde erfolgreich gesendet!</span>',
+        missingCaptcha: '<span style="color: red;">Bitte bestätige, dass du kein Roboter bist.</span>',
         error: '<span style="color: red;">Beim Senden ist ein Fehler aufgetreten. Bitte lade die Seite neu und versuche es erneut. Fehler: '
       },
       emailConfig: {
@@ -60,7 +61,12 @@ export default {
           me.response = me.snippets.success;
           e.target.style.display = 'none';
         }).catch(function (error) {
-          me.response = `${me.snippets.error} ${error} </span>`;
+          if(error.text.includes('reCAPTCHA')) {
+            me.response = me.snippets.missingCaptcha;
+            me.sent = false;
+            return;
+          }
+          me.response = `${me.snippets.error} ${error.text} </span>`;
           console.error('FAILED...', error);
         });
     },
