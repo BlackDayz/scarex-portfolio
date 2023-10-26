@@ -28,6 +28,13 @@ const routes = [
     component: function () {
       return import(/* webpackChunkName: "Datenschutz" */ '../views/legal/Privacy.view.vue');
     }
+  },
+  {
+    path: '/contact',
+    name: 'Kontakt',
+    component: function () {
+      return import(/* webpackChunkName: "Datenschutz" */ '../views/Contact/Contact.view.vue');
+    }
   }
 ];
 
