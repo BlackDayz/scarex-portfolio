@@ -16,7 +16,7 @@
         "emailjs-com": "^3.2.0",
         "sass": "^1.69.4",
         "stylelint-scss": "^5.2.1",
-        "vue": "^3.3.7",
+        "vue": "^3.3.8",
         "vue-router": "^4.0.3",
         "vue3-ytframe": "^0.4.0",
         "vuex": "^4.0.0"
