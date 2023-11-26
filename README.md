@@ -1,5 +1,7 @@
 # scarex-portfolio
 
+> Disclamer: This portfolio is not the offical one for scarex. It's made by me, and i have showed it to him but he doesnt replied back at some point. So i decided to make it public.
+
 ## Project setup
 
 ```
