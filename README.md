@@ -1,6 +1,6 @@
 # scarex-portfolio
 
-> Disclamer: This portfolio is not the offical one for scarex. It's made by me, and i have showed it to him but he doesnt replied back at some point. So i decided to make it public.
+> Disclamer: This portfolio is not the official one for Scarex. It was made by me, and I showed it to him, but at some point he didn't respond. So I decided to publish it.
 
 ## Project setup
 
