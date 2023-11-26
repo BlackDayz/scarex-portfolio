@@ -3,7 +3,11 @@ import {execa} from 'execa';
 import fs from 'fs';
 (async () => {
   try {
-    await execa('git', ['branch', '-D', 'gh-pages']);
+    try {
+        await execa('git', ['branch', '-D', 'gh-pages']);
+    } catch (e) {
+        console.log('No existing gh-pages branch, moving on...');
+    }
     await execa('git', ['checkout', '--orphan', 'gh-pages']);
     // eslint-disable-next-line no-console
     console.log('Building started...');
